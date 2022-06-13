@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Start Page</title>
+    </h:head>
+    <h:body style="background-image: url('https://static01.nyt.com/images/2022/04/04/multimedia/15ai-nocode/15ai-nocode-mobileMasterAt3x.jpg'); text-align: center">
+        <div class="card" style="background-color: whitesmoke">
+            <h:form>
+                <h1>Subscribe to our newsletter!</h1> 
+                <br></br>
+
+                <p:outputLabel value="Email " for="email" style=" font-weight: bold; "></p:outputLabel>
+                <p:inputText id="email" type="email" value="#{controller.email}" placeholder="example@mail.com" />
+
+                <p:commandButton actionListener="#{controller.checkEmail()}" value="Register" update="status" ></p:commandButton>
+                <br></br>
+                <h:outputText value="#{controller.messageStatus}" id="status"></h:outputText>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
